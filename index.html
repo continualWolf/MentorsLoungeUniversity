@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="wwwroot/images/MentorsLoungeMainLogo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/b4cde310f3.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="wwwroot/css/main.css">
+  <script src="wwwroot/javascript/main.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div>
+        <img src="wwwroot/images/MentorsLoungeMainLogo.PNG" />
+      </div>
+      <nav>
+        <a onclick="handlePageLinkClick(this, 'homePage')" class="navItem active"><img src="wwwroot/icons/house-solid.svg" /> Home</a>
+        <a class="navItem"><img src="wwwroot/icons/magnifying-glass-solid.svg" /> Search</a>
+        <a class="navItem"><img src="wwwroot/icons/chalkboard-user-solid.svg" /> Sessions</a>
+        <a onclick="handlePageLinkClick(this, 'settingsPage')" class="navItem"><img src="wwwroot/icons/gear-solid.svg" />Settings</a>
+      </nav>
+    </div>
+
+    <!-- HOME PAGE -->
+    <div class="main-content" id="homePage">
+        <!-- NOTIFICATION BUTTON -->
+        <button class="notification-button" onclick="toggleNotifications()"><img src="wwwroot/icons/bell-regular.svg" /></button> 
+        <!-- CALENDAR BUTTON -->
+        <button class="notification-button" style="right: 90px;"><img src="wwwroot/icons/calendar-regular.svg"  /></button> 
+        
+      <!-- TOP BAR -->
+      <div class="top-bar">
+        <div class="greeting">Hello, Imani</div>
+        <button class="update-profile-btn"><img src="wwwroot/icons/user-regular.svg" />Update Profile</button>
+      </div>
+
+      <div id="mentorProfilePage"></div>
+
+      <!-- SESSION INFO (TODAY & TOMORROW) -->
+      <div class="session-info">
+        <div class="session-card">
+          <h3>Session for Today</h3>
+          <p>Session with Michael Scott</p>
+          <p>10:00 - 10:30am</p>
+        </div>
+        <div class="session-card">
+          <h3>Session for Tomorrow</h3>
+          <p>Session with Kamou</p>
+          <p>10:00 - 10:30am</p>
+        </div>
+      </div>
+
+      <!-- TOP MENTORS -->
+      <div class="section-title">Top Mentors for you</div>
+      <div class="mentors-grid">
+        <!-- Mentor Card 1 -->
+        <div class="mentor-card">
+          <img src="wwwroot/images/MentorDemoImage.PNG" alt="Mentor Image" />
+          <div class="overlay"></div>
+          <div class="mentor-card-body">
+            <h4>John Doe</h4>
+            <h3>Product Designer</h3>
+            <div class="mentor-card-tags">
+                <p>Career Advice</p>
+                <p>College Queries</p>
+                <p>Interview Techniques</p>
+            </div>
+            <button class="book-session-btn">Book Session</button>
+          </div>
+        </div>
+        <!-- Mentor Card 2 -->
+        <div class="mentor-card">
+            <img src="wwwroot/images/MentorDemoImageTwo.jpg" alt="Mentor Image" />
+            <div class="overlay"></div>
+            <div class="mentor-card-body">
+              <h4>John Doe</h4>
+              <h3>Product Designer</h3>
+              <div class="mentor-card-tags">
+                  <p>Career Advice</p>
+                  <p>College Queries</p>
+                  <p>Interview Techniques</p>
+              </div>
+              <button class="book-session-btn">Book Session</button>
+            </div>
+          </div>
+        <!-- Mentor Card 3 -->
+        <div class="mentor-card">
+            <img src="wwwroot/images/MentorDemoImageThree.jpg" alt="Mentor Image" />
+            <div class="overlay"></div>
+            <div class="mentor-card-body">
+              <h4>John Doe</h4>
+              <h3>Product Designer</h3>
+              <div class="mentor-card-tags">
+                  <p>Career Advice</p>
+                  <p>College Queries</p>
+                  <p>Interview Techniques</p>
+              </div>
+              <button class="book-session-btn">Book Session</button>
+            </div>
+          </div>
+        <!-- Mentor Card 4 -->
+        <div class="mentor-card">
+            <img src="wwwroot/images/MentorDemoImageFour.jpg" alt="Mentor Image" />
+            <div class="overlay"></div>
+            <div class="mentor-card-body">
+              <h4>John Doe</h4>
+              <h3>Product Designer</h3>
+              <div class="mentor-card-tags">
+                  <p>Career Advice</p>
+                  <p>College Queries</p>
+                  <p>Interview Techniques</p>
+              </div>
+              <button class="book-session-btn">Book Session</button>
+            </div>
+          </div>
+        <!-- Mentor Card 5 -->
+        <div class="mentor-card">
+            <img src="wwwroot/images/MentorDemoImageFive.jpg" alt="Mentor Image" />
+            <div class="overlay"></div>
+            <div class="mentor-card-body">
+              <h4>John Doe</h4>
+              <h3>Product Designer</h3>
+              <div class="mentor-card-tags">
+                  <p>Career Advice</p>
+                  <p>College Queries</p>
+                  <p>Interview Techniques</p>
+              </div>
+              <button class="book-session-btn">Book Session</button>
+            </div>
+          </div>
+        <!-- Mentor Card 6 -->
+        <div class="mentor-card">
+            <img src="wwwroot/images/MentorDemoImageSix.jpg" alt="Mentor Image" />
+            <div class="overlay"></div>
+            <div class="mentor-card-body">
+              <h4>John Doe</h4>
+              <h3>Product Designer</h3>
+              <div class="mentor-card-tags">
+                  <p>Career Advice</p>
+                  <p>College Queries</p>
+                  <p>Interview Techniques</p>
+              </div>
+              <button class="book-session-btn">Book Session</button>
+            </div>
+          </div>
+      </div>
+
+      <!-- NOTIFICATION PANEL -->
+      <div class="notification-panel" id="notificationPanel">
+        <button class="close-panel-btn" onclick="toggleNotifications()">X</button>
+        <h3>Notifications</h3>
+        <div class="notification-item">
+            <div class="notification-item-profile">
+                <img src="wwwroot/images/MentorDemoImage.PNG" />
+            </div>
+            <div class="notification-item-content">
+                <div class="notification-item-header">
+                    <strong>Session with Alfa</strong>
+                    <p>3m</p>
+                </div>
+                <div class="notification-item-body">
+                    Lorem ipsum dolor sit amet, consectetur
+                </div>
+            </div>
+        </div>
+        <div class="notification-item">
+            <div class="notification-item-profile">
+                <img src="wwwroot/images/MentorDemoImage.PNG" />
+            </div>
+            <div class="notification-item-content">
+                <div class="notification-item-header">
+                    <strong>Session with Kamou</strong>
+                    <p>yesterday</p>
+                </div>
+                <div class="notification-item-body">
+                    Lorem ipsum dolor sit amet, consectetur
+                </div>
+            </div>
+        </div>
+        <div class="notification-item">
+            <div class="notification-item-profile">
+                <img src="wwwroot/images/MentorDemoImage.PNG" />
+            </div>
+            <div class="notification-item-content">
+                <div class="notification-item-header">
+                    <strong>Session with Alfa</strong>
+                    <p>1w</p>
+                </div>
+                <div class="notification-item-body">
+                    Lorem ipsum dolor sit amet, consectetur
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE PAGE -->
+    <div class="main-content" id="profilePage">
+        <div class="profile-page-container">
+            <div class="profile-page-header">
+                <div class="profile-page-pic">
+                    <img src="wwwroot/images/MentorDemoImage.PNG">
+                </div>
+                <div class="profile-page-header-title">
+                    <h2>
+                        Adiel Omari
+                    </h2>
+                    <span>Product Designer &nbsp; . &nbsp; Design Mentor</span>
+                </div>
+            </div>
+            <div class="profilePage-banner">
+                <div class="session-card" style="max-width: 500px;">
+                    <h4>Next Available Session on 17th October</h4>
+                    <p class="purple-link">View Details</p>
+                </div>
+
+                <div class="profilePage-banner-buttons">
+                    <button class="update-profile-btn w-150">Message Profile</button>
+                    <button class="block-btn w-150">Book a session</button>
+                </div>
+            </div>
+            <div class="profile-text-section">
+                <div>
+                    <h5>Price</h5>
+                    <p>$50 per Session</p>
+                </div>
+                <div>
+                    <h5>About</h5>
+                    <p>I’m your Product Design Mentor. With a passion for defining aesthetics, functionality, and user experiences, I’m here to guide you through the art and science of product design. Let’s redefine boundaries together!</p>
+                </div>
+                <div class="double">
+                    <div>
+                        <h5>Rating</h5>
+                        <p>Verified User Based on Reviews and Ratings</p>
+                    </div>
+                    <div>
+                        <h5>Education</h5>
+                        <p>Masters in Visual Designing</p>
+                    </div>
+                </div>
+                <div>
+                    <h5>Experience</h5>
+                    <p>Masters in Visual Designing</p>
+                </div>
+            </div>
+            <div class="profile-review-section">
+                <h5>Reviews</h5>
+                <!-- REVIEW ONE -->
+                <div class="review-row">
+                    <div class="review-row-header">
+                        <div class="review-profile-pic">
+                            <img src="wwwroot/images/MentorDemoImageSix.jpg">
+                        </div>
+                        <div class="title-star-container">
+                            <span>Taraji</span>
+                            <div class="stars-container">
+                                <img src="wwwroot/icons/star-solid.svg">
+                                <img src="wwwroot/icons/star-solid.svg">
+                                <img src="wwwroot/icons/star-solid.svg">
+                                <img src="wwwroot/icons/star-solid.svg">
+                                <img src="wwwroot/icons/star-half-stroke-solid.svg">
+                            </div> 
+                        </div>
+                        
+                    </div>
+                    <div class="review-row-body">
+                        <p>I had a great experience. The session was a profound learning experience, seamlessly blending theory with practical insights.</p>
+                    </div>
+                </div>
+                <!-- REVIEW TWO -->
+                <div class="review-row">
+                    <div class="review-row-header">
+                        <div class="review-profile-pic">
+                            <img src="wwwroot/images/MentorDemoImageFour.jpg">
+                        </div>
+                        <div class="title-star-container">
+                            <span>Eshe</span>
+                            <div class="stars-container">
+                                <img src="wwwroot/icons/star-solid.svg">
+                                <img src="wwwroot/icons/star-solid.svg">
+                                <img src="wwwroot/icons/star-solid.svg">
+                            </div> 
+                        </div>
+                        
+                    </div>
+                    <div class="review-row-body">
+                        <p>I had a great experience. The session was a profound learning experience, seamlessly blending theory with practical insights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SETTINGS PAGE -->
+    <div class="main-content" id="settingsPage">
+        <!-- NOTIFICATION BUTTON -->
+        <button class="block-btn top-right w-150">Save</button>
+        
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <div class="greeting">Settings</div>
+        </div>
+
+        <div class="settings-container">
+            <div class="edit-profile island">
+                <h5>Edit Profile</h5>
+                <div class="edit-profile-picture-row">
+                    <div class="edit-profile-picture">
+                        <img src="wwwroot/images/MentorDemoImageThree.jpg">
+                    </div>
+                </div>
+                <div>
+                    <input type="text" value="Adiel Omari" />
+                </div>
+                <div>
+                    <p>Description</p>
+                    <input type="text" value="I'm your Product Design Mentor wit" />
+                </div>
+                <div>
+                    <p>Education</p>
+                    <input type="text" value="Masters in Visual Designing." />
+                </div>
+                <div>
+                    <p>Experience</p>
+                    <input type="text" value="1 year" />
+                </div>
+                <div>
+                    <p>Links of Social Media Platforms</p>
+                </div>
+                <div style="display: flex; justify-content: end;">
+                    <button class="update-profile-btn w-150">+ Add More</button> 
+                </div>
+                <div>
+                    <p>Price of each session</p>
+                    <input type="text" value="$50" />
+                </div>
+            </div>
+            <div class="settins-column">
+                <div class="login-container island">
+                    <h5>Login &amp; Security</h5>
+                </div>
+                <div class="notifications-container island">
+                    <h5>Notifications</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
