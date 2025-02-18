@@ -23,7 +23,7 @@
       </div>
       <nav>
         <a onclick="handlePageLinkClick(this, 'homePage')" class="navItem active"><img src="wwwroot/icons/house-solid.svg" /> Home</a>
-        <a class="navItem"><img src="wwwroot/icons/magnifying-glass-solid.svg" /> Search</a>
+        <a onclick="handlePageLinkClick(this, 'searchPage')" class="navItem"><img src="wwwroot/icons/magnifying-glass-solid.svg" /> Search</a>
         <a class="navItem"><img src="wwwroot/icons/chalkboard-user-solid.svg" /> Sessions</a>
         <a onclick="handlePageLinkClick(this, 'settingsPage')" class="navItem"><img src="wwwroot/icons/gear-solid.svg" />Settings</a>
       </nav>
@@ -299,6 +299,83 @@
         </div>
     </div>
 
+    <!-- SEARCH PAGE -->
+    <div class="main-content" id="searchPage">
+        <div class="searchContainer">
+            <div class="searchSectionContainer island" style="padding:0px; gap:0px">
+                <div class="searchSecondaryContainer">
+                    <div class="input-container">
+                        <img src="wwwroot/icons/magnifying-glass-solid.svg" alt="Icon" class="input-icon" />
+                        <input type="text" placeholder="Product Designer" />
+                    </div>
+                    <div class="previousSearchContainer">
+                        <div class="previousSearchItem">Product Designer</div>
+                        <div class="previousSearchItem">UX Researcher</div>
+                        <div class="previousSearchItem">Product Designer</div>
+                    </div>
+                </div>
+                <div class="yellowLine">
+
+                </div>
+            </div>
+            <div class="searchHistorySectionContainer island">
+                <h5>Recent Searches</h5>
+                <div class="notification-item">
+                    <div class="notification-item-profile">
+                        <img src="wwwroot/images/MentorDemoImage.PNG" />
+                    </div>
+                    <div class="notification-item-content">
+                        <div class="notification-item-header">
+                            <strong>Mona Sainz</strong>
+                        </div>
+                        <div class="notification-item-body">
+                            Mentor, Product Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-item-profile">
+                        <img src="wwwroot/images/MentorDemoImageThree.jpg" />
+                    </div>
+                    <div class="notification-item-content">
+                        <div class="notification-item-header">
+                            <strong>Mona Sainz</strong>
+                        </div>
+                        <div class="notification-item-body">
+                            Mentor, Product Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-item-profile">
+                        <img src="wwwroot/images/MentorDemoImageFour.jpg" />
+                    </div>
+                    <div class="notification-item-content">
+                        <div class="notification-item-header">
+                            <strong>Mona Sainz</strong>
+                        </div>
+                        <div class="notification-item-body">
+                            Mentor, Product Designer
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-item-profile">
+                        <img src="wwwroot/images/MentorDemoImageTwo.jpg" />
+                    </div>
+                    <div class="notification-item-content">
+                        <div class="notification-item-header">
+                            <strong>Mona Sainz</strong>
+                        </div>
+                        <div class="notification-item-body">
+                            Mentor, Product Designer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SETTINGS PAGE -->
     <div class="main-content" id="settingsPage">
         <!-- NOTIFICATION BUTTON -->
@@ -346,9 +423,52 @@
             <div class="settins-column">
                 <div class="login-container island">
                     <h5>Login &amp; Security</h5>
+                    <h6>Login</h6>
+                    <div class="pl10">
+                        <div class="spacedRow"><span class="f14">Password</span><div class="purple-link f14">Update</div></div>
+                        <span class="lightGreyText">
+                            Last updated 6 months ago
+                        </span>
+                    </div>
+                    <h6>Account Settings</h6>
+                    <div class="spacedRow pl10">
+                        <div class="f14">Delete your Account</div>   
+                        <div class="purple-link f14">Delete</div>
+                    </div>
+                    <div class="spacedRow pl10">
+                        <div class="f14">Deactivate your Account</div>   
+                        <div class="purple-link f14">Deactivate</div>
+                    </div>
                 </div>
                 <div class="notifications-container island">
                     <h5>Notifications</h5>
+                    <h6>General Notifications</h6>
+                    <div class="spacedRow">
+                        <div><p class="f14">App Notifications</p></div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                          </label>
+                    </div>
+                    <div style="height:5px; width:100%; border-bottom:1px solid #00000075"></div>
+                    <h6>Promotional Notifications</h6>
+                    <div class="spacedRow">
+                        <div><p class="f14">App Notifications</p></div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                          </label>
+                    </div>
+                    <div style="height:5px; width:100%; border-bottom:1px solid #00000075"></div>
+                    <h6>Updates &amp; Feedback</h6>
+                    <div class="spacedRow">
+                        <div><p class="f14">App Notifications</p></div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                          </label>
+                    </div>
+                    <div style="height:5px; width:100%; border-bottom:1px solid #00000075"></div>
                 </div>
             </div>
         </div>
