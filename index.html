@@ -24,7 +24,7 @@
       <nav>
         <a onclick="handlePageLinkClick(this, 'homePage')" class="navItem active"><img src="wwwroot/icons/house-solid.svg" /> Home</a>
         <a onclick="handlePageLinkClick(this, 'searchPage')" class="navItem"><img src="wwwroot/icons/magnifying-glass-solid.svg" /> Search</a>
-        <a class="navItem"><img src="wwwroot/icons/chalkboard-user-solid.svg" /> Sessions</a>
+        <a onclick="handlePageLinkClick(this, 'sessionPage')" class="navItem"><img src="wwwroot/icons/chalkboard-user-solid.svg" /> Sessions</a>
         <a onclick="handlePageLinkClick(this, 'settingsPage')" class="navItem"><img src="wwwroot/icons/gear-solid.svg" />Settings</a>
       </nav>
     </div>
@@ -294,6 +294,35 @@
                     <div class="review-row-body">
                         <p>I had a great experience. The session was a profound learning experience, seamlessly blending theory with practical insights.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SESSION PAGE -->
+    <div class="main-content" id="sessionPage">
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <div class="greeting">Sessions</div>
+        </div>
+        <div class="sessionContainer island">
+            <div class="sessionRow">
+                <div class="sessionIconContainer">
+                    <img class="sessionIcon" src="wwwroot/images/MentorDemoImageFour.jpg">
+                </div>
+                <div class="sessionRowBody">
+                    <div class="sessionTitle">Product Design As A Career</div>
+                    <div class="f12">Session with James Charles</div>
+                    <button type="button" class="joinSessionButton">Join Now</button>
+                </div>
+            </div>
+            <div class="sessionRow">
+                <div class="sessionIconContainer">
+                    <img class="sessionIcon" src="wwwroot/images/MentorDemoImageSix.jpg">
+                </div>
+                <div class="sessionRowBody">
+                    <div class="sessionTitle">Product Design As A Career</div>
+                    <div class="f12">Session with James Charles</div>
                 </div>
             </div>
         </div>
