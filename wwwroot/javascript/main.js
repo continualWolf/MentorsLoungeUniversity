@@ -14,7 +14,20 @@ $(document).ready(function(){
        attachClosePopUpEvent()
     });
 
-   
+   $('.js-typeOption').on('click', function(){
+        $('.js-typeOption').removeClass("active-option");
+        $(this).addClass("active-option");
+   });
+
+    $('.js-timeSpanOption').on('click', function(){
+        $('.js-timeSpanOption').removeClass("active-option");
+        $(this).addClass("active-option");
+    });
+
+    $('.js-timeOption').on('click', function(){
+        $('.js-timeOption').removeClass("active-option");
+        $(this).addClass("active-option");
+    });
 });
 
 function attachClosePopUpEvent(){

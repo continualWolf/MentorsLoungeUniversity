@@ -499,6 +499,29 @@ filter: brightness(0) saturate(100%) invert(100%);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width:100%;
+  padding-right: 25px;
+  border-right: 1px solid #00000012;
+}
+
+.profile-timeslot-container{
+  display: flex;
+  flex-direction: column;
+  width:30%;
+  height: 95%;
+  overflow: hidden;
+  border-bottom: 1px solid #00000012;
+}
+
+.contact-option-container {
+  border: solid black 0.5px;
+  width: 350px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: .375rem;
 }
 
 .profile-page-pic{
@@ -992,4 +1015,110 @@ input:checked + .slider:before {
 .clockIcon{
   height: 25px;
   width: 25px;
+}
+
+.option-button {
+  margin:0px !important;
+  flex-direction: row;
+  color: #00000080;
+  justify-content: center;
+  align-items: center;
+  appearance: button;
+  background-color: rgb(225, 225, 226);
+  background-image: none;
+  border-bottom-color: rgb(229, 231, 235);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(229, 231, 235);
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: rgb(229, 231, 235);
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: rgb(229, 231, 235);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-style: solid;
+  border-top-width: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-feature-settings: normal;
+  font-size: 16px;
+  font-variation-settings: normal;
+  font-weight: 400;
+  height: 40px;
+  line-height: 24px;
+  margin-bottom: 4px;
+  margin-left: 0px;
+  margin-right: 8px;
+  margin-top: 4px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 20px;
+  tab-size: 4;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  transition: all ease-in-out 50ms;
+}
+
+.option-button:not(.active-option):hover {
+  opacity: 0.5; /* Use a decimal for opacity, not a percentage */
+}
+
+.options-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+}
+
+.active-option{
+  background-color: #5c3ba8 !important;
+  color: white !important;
+}
+.option-button.js-timeSpanOption {
+  width: 90px;
+}
+
+.option-button.js-timeOption {
+  width: 30%;
+  font-size: 19px;
+  height: 60px;
+  font-weight: 600;
+  color: #00000080;
+}
+
+.theLine{
+  width: 100%;
+  height: 5px;
+  border-bottom: 1px solid #00000012;
+}
+
+.timeOptionContainer{
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.continue-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  height: 150px;
+  align-items: center;
 }
