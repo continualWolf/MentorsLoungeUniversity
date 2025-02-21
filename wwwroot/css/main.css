@@ -1083,7 +1083,7 @@ input:checked + .slider:before {
 }
 
 .active-option{
-  background-color: #5c3ba8 !important;
+  background-color: #5c3ba8d9 !important;;
   color: white !important;
 }
 .option-button.js-timeSpanOption {
