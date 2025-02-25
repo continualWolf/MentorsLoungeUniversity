@@ -14,8 +14,12 @@
   <script src="wwwroot/javascript/main.js"></script>
 </head>
 <body>
+    <div class="container" id="loginpage" style="justify-content: center; align-items: center; gap: 10px;">
+        <button class="block-btn" id="menteeLogInBtn">Log In As Mentee</button>
+        <button class="block-btn" id="mentorLogInBtn">Log In As Mentor</button>
+    </div>
 
-  <div class="container">
+  <div class="container" id="mainPages" style="display:none">
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div>
@@ -298,18 +302,6 @@
             </div>
         </div>
         <div class="profile-timeslot-container">
-            <!-- <div class="contact-option-container">
-                <h4>SMS</h4>
-            </div>
-            <div class="contact-option-container">
-                <h4>Video Call</h4>
-            </div>
-            <div class="contact-option-container">
-                <h4>Voice Call</h4>
-            </div>
-            <div class="contact-option-container">
-                <h4>Video Messsage</h4>
-            </div> -->
             <div style="width: 100%; display: flex; flex-flow: column; gap: 25px; height: 800px;">
                 <h2 style="font-size: 35px; font-weight: 500;">Contact Adiel:</h2>
                 <h4>Contact Method</h4>
@@ -374,7 +366,7 @@
             </div>
             <div class="continue-container">
                 <p style="font-size: 17px; font-weight: 500;">£500 . Session</p>
-                <button class="block-btn w-150" style="border-radius: 4px;">Continue</button>
+                <button class="block-btn w-150" style="border-radius: 4px;" id="bookSessionBtn">Continue</button>
             </div>
         </div>
     </div>
