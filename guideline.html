@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Style Guide</title>
+  <link rel="stylesheet" href="wwwroot/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body style="overflow-y: auto;">
+  <div class="container" style="flex-direction: column; gap:50px; padding: 10px;">
+    <header>
+      <h1>Brand Style Guide</h1>
+      <nav>
+        <a href="#typography">Typography</a>
+        <a href="#buttons">Buttons & Links</a>
+        <a href="#forms">Forms</a>
+        <a href="#cards">Cards & Panels</a>
+        <a href="#modals">Notifications & Modals</a>
+        <a href="#navigation">Navigation</a>
+        <a href="#images">Images & Icons</a>
+        <a href="#response">Responsive Design</a>
+      </nav>
+    </header>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <p>Example paragraph text styled with body font, demonstrating the font family, weight, and style used throughout the application.</p>
+    </section>
+
+    <section id="buttons">
+      <h2>Buttons & Links</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+            <button class="block-btn w-150">Block Button</button>
+            <a href="#" class="update-profile-btn w-150"><img src="wwwroot/icons/user-regular.svg" /> Update Profile</a>
+      </div>
+    </section>
+
+    <section id="forms">
+      <h2>Forms</h2>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <input type="text" placeholder="Text input">
+        <textarea placeholder="Textarea for multi-line input"></textarea>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+        </label>
+      </div>
+    </section>
+
+    <section id="cards">
+      <h2>Cards & Panels</h2>
+      <div class="session-card">
+        <h3>Example Card</h3>
+        <p>This is an example of a session card used for displaying brief session details.</p>
+      </div>
+    </section>
+
+    <!-- <section id="modals">
+      <h2>Notifications & Modals</h2>
+      <div class="notification-panel" style="transform: translateY(0);">
+        <h3>Example Notification</h3>
+        <p>This is an example of a notification panel.</p>
+      </div>
+    </section> -->
+
+    <section id="navigation">
+      <h2>Navigation</h2>
+      <div class="sidebar">
+        <h3>Sidebar Navigation</h3>
+        <nav>
+          <a href="#" class="active">Home</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="images">
+      <h2>Images & Icons</h2>
+      <img class="w-150" src="wwwroot/images/MentorDemoImage.PNG" alt="Sample Image">
+      <img class="w-150" src="wwwroot/icons/bell-regular.svg" alt="Bell Icon">
+    </section>
+
+    <section id="response">
+      <h2>Responsive Design</h2>
+      <p>This section demonstrates the responsiveness of the layout and elements when the browser window is resized.</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Brand Style Guide. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    // Optional JavaScript for interactive elements or smooth scrolling
+    $('nav a').click(function(e) {
+      e.preventDefault();
+      var targetSection = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(targetSection).offset().top
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
