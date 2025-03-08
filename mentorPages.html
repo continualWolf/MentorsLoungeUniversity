@@ -9,19 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/b4cde310f3.js" crossorigin="anonymous"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
   
   <link rel="stylesheet" href="wwwroot/css/main.css">
-  <link rel="stylesheet" href="wwwroot/css/calendar.css">
+  <link rel="stylesheet" href="wwwroot/css/onlyMentor.css">
   <script src="wwwroot/javascript/main.js"></script>
 </head>
 <body>
-    <div class="container" id="loginpage" style="justify-content: center; align-items: center; gap: 10px;">
-        <a class="block-btn" id="menteeLogInBtn">Log In As Mentee</a>
-        <a class="block-btn" href="mentorPages.html">Log In As Mentor</a>
-    </div>
-
-  <div class="container" id="mainPages" style="display:none">
+  <div class="container" id="mainPages">
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div>
@@ -40,7 +34,7 @@
         <!-- NOTIFICATION BUTTON -->
         <button class="notification-button" onclick="toggleNotifications()"><img src="wwwroot/icons/bell-regular.svg" /></button> 
         <!-- CALENDAR BUTTON -->
-        <button class="notification-button" onclick="toggleCalendar()" style="right: 90px;"><img src="wwwroot/icons/calendar-regular.svg"  /></button> 
+        <button class="notification-button" style="right: 90px;"><img src="wwwroot/icons/calendar-regular.svg"  /></button> 
         
       <!-- TOP BAR -->
       <div class="top-bar">
@@ -48,228 +42,61 @@
         <button class="update-profile-btn"><img src="wwwroot/icons/user-regular.svg" />Update Profile</button>
       </div>
 
-      <div id="mentorProfilePage"></div>
-
-      <!-- SESSION INFO (TODAY & TOMORROW) -->
-      <div class="session-info">
-        <div class="session-card">
-          <h3>Session for Today</h3>
-          <p>Session with Michael Scott</p>
-          <p>10:00 - 10:30am</p>
+      <div style="display: flex; flex-flow: row; width: 100%; height: 80%;">
+        <div style="width: 60%;">
+            <div class="greeting">Requests</div>
+            <div class="request-card-container">
+                <div class="request-card" style="position: relative;">
+                    <img src="wwwroot/images/MentorDemoImage.PNG" alt="Profile Picture" class="request-image">
+                    <div class="request-info">
+                        <h3 class="request-title">Product Designer Career Discussion</h3>
+                        <p class="request-by">Request By Dakarai</p>
+                        <p class="request-time"> <img src="wwwroot/icons/clock-regular.svg"> &nbsp; 30 minutes  &nbsp; <span class="request-date"> <img src="wwwroot/icons/calendar-regular.svg"> &nbsp; Wednesday, 3 October</span></p>
+                        <div class="purple-link f14" style="position: absolute; right: 10px;">View Details</div>
+                    </div>
+                </div>
+                <div class="request-card" style="position: relative;">
+                    <img src="wwwroot/images/MentorDemoImage.PNG" alt="Profile Picture" class="request-image">
+                    <div class="request-info">
+                        <h3 class="request-title">Product Designer Career Discussion</h3>
+                        <p class="request-by">Request By Dakarai</p>
+                        <p class="request-time"> <img src="wwwroot/icons/clock-regular.svg"> &nbsp; 30 minutes  &nbsp; <span class="request-date"> <img src="wwwroot/icons/calendar-regular.svg"> &nbsp; Wednesday, 3 October</span></p>
+                        <div class="purple-link f14" style="position: absolute; right: 10px;">View Details</div>
+                    </div>
+                </div>
+                <div class="request-card" style="position: relative;">
+                    <img src="wwwroot/images/MentorDemoImage.PNG" alt="Profile Picture" class="request-image">
+                    <div class="request-info">
+                        <h3 class="request-title">Product Designer Career Discussion</h3>
+                        <p class="request-by">Request By Dakarai</p>
+                        <p class="request-time"> <img src="wwwroot/icons/clock-regular.svg"> &nbsp; 30 minutes  &nbsp; <span class="request-date"> <img src="wwwroot/icons/calendar-regular.svg"> &nbsp; Wednesday, 3 October</span></p>
+                        <div class="purple-link f14" style="position: absolute; right: 10px;">View Details</div>
+                    </div>
+                </div>
+                <div class="request-card" style="position: relative;">
+                    <img src="wwwroot/images/MentorDemoImage.PNG" alt="Profile Picture" class="request-image">
+                    <div class="request-info">
+                        <h3 class="request-title">Product Designer Career Discussion</h3>
+                        <p class="request-by">Request By Dakarai</p>
+                        <p class="request-time"> <img src="wwwroot/icons/clock-regular.svg"> &nbsp; 30 minutes  &nbsp; <span class="request-date"> <img src="wwwroot/icons/calendar-regular.svg"> &nbsp; Wednesday, 3 October</span></p>
+                        <div class="purple-link f14" style="position: absolute; right: 10px;">View Details</div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
-        <div class="session-card">
-          <h3>Session for Tomorrow</h3>
-          <p>Session with Kamou</p>
-          <p>10:00 - 10:30am</p>
+        <div style="width: 40%; border-left: 1px solid black; display: flex; flex-flow: column; gap: 10px; height: 100%;padding-left: 20px;">
+            <div class="session-card">
+                <h3>Session for Today</h3>
+                <p>Session with Michael Scott</p>
+                <p>10:00 - 10:30am</p>
+            </div>
+            <div class="session-card">
+                <h3>Session for Today</h3>
+                <p>Session with Michael Scott</p>
+                <p>10:00 - 10:30am</p>
+            </div>
         </div>
-      </div>
-
-      <!-- TOP MENTORS -->
-      <div class="section-title">Top Mentors for you</div>
-      <div class="mentors-grid">
-        <!-- Mentor Card 1 -->
-        <div class="mentor-card">
-          <img src="wwwroot/images/MentorDemoImage.PNG" alt="Mentor Image" />
-          <div class="overlay"></div>
-          <div class="mentor-card-body">
-            <h4>John Doe</h4>
-            <h3>Product Designer</h3>
-            <div class="mentor-card-tags">
-                <p>Career Advice</p>
-                <p>College Queries</p>
-                <p>Interview Techniques</p>
-            </div>
-            <button class="book-session-btn">Book Session</button>
-          </div>
-        </div>
-        <!-- Mentor Card 2 -->
-        <div class="mentor-card">
-            <img src="wwwroot/images/MentorDemoImageTwo.jpg" alt="Mentor Image" />
-            <div class="overlay"></div>
-            <div class="mentor-card-body">
-              <h4>John Doe</h4>
-              <h3>Product Designer</h3>
-              <div class="mentor-card-tags">
-                  <p>Career Advice</p>
-                  <p>College Queries</p>
-                  <p>Interview Techniques</p>
-              </div>
-              <button class="book-session-btn">Book Session</button>
-            </div>
-          </div>
-        <!-- Mentor Card 3 -->
-        <div class="mentor-card">
-            <img src="wwwroot/images/MentorDemoImageThree.jpg" alt="Mentor Image" />
-            <div class="overlay"></div>
-            <div class="mentor-card-body">
-              <h4>John Doe</h4>
-              <h3>Product Designer</h3>
-              <div class="mentor-card-tags">
-                  <p>Career Advice</p>
-                  <p>College Queries</p>
-                  <p>Interview Techniques</p>
-              </div>
-              <button class="book-session-btn">Book Session</button>
-            </div>
-          </div>
-        <!-- Mentor Card 4 -->
-        <div class="mentor-card">
-            <img src="wwwroot/images/MentorDemoImageFour.jpg" alt="Mentor Image" />
-            <div class="overlay"></div>
-            <div class="mentor-card-body">
-              <h4>John Doe</h4>
-              <h3>Product Designer</h3>
-              <div class="mentor-card-tags">
-                  <p>Career Advice</p>
-                  <p>College Queries</p>
-                  <p>Interview Techniques</p>
-              </div>
-              <button class="book-session-btn">Book Session</button>
-            </div>
-          </div>
-        <!-- Mentor Card 5 -->
-        <div class="mentor-card">
-            <img src="wwwroot/images/MentorDemoImageFive.jpg" alt="Mentor Image" />
-            <div class="overlay"></div>
-            <div class="mentor-card-body">
-              <h4>John Doe</h4>
-              <h3>Product Designer</h3>
-              <div class="mentor-card-tags">
-                  <p>Career Advice</p>
-                  <p>College Queries</p>
-                  <p>Interview Techniques</p>
-              </div>
-              <button class="book-session-btn">Book Session</button>
-            </div>
-          </div>
-        <!-- Mentor Card 6 -->
-        <div class="mentor-card">
-            <img src="wwwroot/images/MentorDemoImageSix.jpg" alt="Mentor Image" />
-            <div class="overlay"></div>
-            <div class="mentor-card-body">
-              <h4>John Doe</h4>
-              <h3>Product Designer</h3>
-              <div class="mentor-card-tags">
-                  <p>Career Advice</p>
-                  <p>College Queries</p>
-                  <p>Interview Techniques</p>
-              </div>
-              <button class="book-session-btn">Book Session</button>
-            </div>
-          </div>
-      </div>
-
-      <!-- CALENDAR PANEL -->
-      <div class="notification-panel" id="calendarPanel">
-        <button class="close-panel-btn" onclick="toggleCalendar()">X</button>
-        <h3>Calendar</h3>
-        <div class="container" style="max-height: 330px; overflow: hidden;">
-            <div class="calendar">
-              <div class="front">
-                <div class="current-date">
-                  <h1>March 2025</h1> 
-                </div>
-      
-                <div class="current-month">
-                  <ul class="week-days">
-                    <li>MON</li>
-                    <li>TUE</li>
-                    <li>WED</li>
-                    <li>THU</li>
-                    <li>FRI</li>
-                    <li>SAT</li>
-                    <li>SUN</li>
-                  </ul>
-      
-                  <div class="weeks">
-                    <div class="first">
-                      <span class="last-month">28</span>
-                      <span class="last-month">29</span>
-                      <span class="last-month">30</span>
-                      <span class="last-month">31</span>
-                      <span>01</span>
-                      <span>02</span>
-                      <span>03</span>
-                    </div>
-      
-                    <div class="second">
-                      <span>04</span>
-                      <span>05</span>
-                      <span class="event">06</span>
-                      <span>07</span>
-                      <span>08</span>
-                      <span>09</span>
-                      <span>10</span>
-                    </div>
-      
-                    <div class="third">
-                      <span>11</span>
-                      <span>12</span>
-                      <span>13</span>
-                      <span>14</span>
-                      <span class="active">15</span>
-                      <span>16</span>
-                      <span>17</span>
-                    </div>
-      
-                    <div class="fourth">
-                      <span>18</span>
-                      <span>19</span>
-                      <span>20</span>
-                      <span>21</span>
-                      <span>22</span>
-                      <span>23</span>
-                      <span>24</span>
-                    </div>
-      
-                    <div class="fifth">
-                      <span>25</span>
-                      <span>26</span>
-                      <span>27</span>
-                      <span>28</span>
-                      <span>29</span>
-                      <span>30</span>
-                      <span>31</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="back">
-                <input placeholder="What's the event?">
-                <div class="info">
-                  <div class="date">
-                    <p class="info-date">
-                    Date: <span>Jan 15th, 2016</span>
-                    </p>
-                    <p class="info-time">
-                      Time: <span>6:35 PM</span>
-                    </p>
-                  </div>
-                  <div class="address">
-                    <p>
-                      Address: <span>129 W 81st St, New York, NY</span>
-                    </p>
-                  </div>
-                  <div class="observations">
-                    <p>
-                      Observations: <span>Be there 15 minutes earlier</span>
-                    </p>
-                  </div>
-                </div>
-      
-                <div class="actions">
-                  <button class="save">
-                    Save <i class="ion-checkmark"></i>
-                  </button>
-                  <button class="dismiss">
-                    Dismiss <i class="ion-android-close"></i>
-                  </button>
-                </div>
-              </div>
-      
-            </div>
-          </div>
       </div>
 
       <!-- NOTIFICATION PANEL -->

@@ -222,6 +222,7 @@ body {
     border-left: 7px solid #6b46c1;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    max-height: 120px;
 }
 
 .session-card h3 {
@@ -400,6 +401,7 @@ filter: brightness(0) saturate(100%) invert(100%);
 /* NOTIFICATION PANEL */
 .notification-panel {
     position: absolute;
+    display: none;
     bottom: 0;
     right: 0;
     width: 400px;
@@ -415,6 +417,7 @@ filter: brightness(0) saturate(100%) invert(100%);
 }
 
 .notification-panel.active {
+  display: block;
   transform: translateY(0);
 }
 
@@ -1121,4 +1124,28 @@ input:checked + .slider:before {
   align-content: center;
   height: 150px;
   align-items: center;
+}
+
+/* Portrait phones */
+@media only screen and (max-width: 600px) {
+  #mainPages{
+    flex-flow: column-reverse;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .sidebar div{
+    display: none;
+  }
+
+  .sidebar nav{
+    display: flex;
+    flex-flow: row;
+  }
+
+  .sidebar nav a{
+    width: 25%;
+  }
 }
